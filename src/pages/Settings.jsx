@@ -207,100 +207,107 @@ const Settings = ({ user }) => {
         </div>
         <div className="space-y-6">
             <div className="space-y-4">
-                <SettingsAttribute 
-                    type="keywords" 
-                    displayName="Keywords 1" 
+                <h3 className="text-lg text-left font-bold text-gray-900 dark:text-gray-300">Agent Alpha</h3>
+                <SettingsAttribute
+                    type="keywords"
+                    displayName="Keywords"
                     value={keywords[0]?.keywords || 'e.g. bugs, errors, issues'}
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={true} 
-                    onChangeFunction={(value) => handleKeywordChange(0, 'keywords', value)} 
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={true}
+                    onChangeFunction={(value) => handleKeywordChange(0, 'keywords', value)}
                 />
-                <SettingsAttribute 
-                    type="email" 
-                    displayName="Email 1" 
-                    value={keywords[0]?.email || 'e.g. devteam@company.com'} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(0, 'email', value)} 
+                <SettingsAttribute
+                    type="email"
+                    displayName="Email"
+                    value={keywords[0]?.email || 'e.g. devteam@company.com'}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(0, 'email', value)}
                 />
-                <SettingsAttribute 
-                    type="slackChannel" 
-                    displayName="Slack Channel 1" 
-                    value={keywords[0]?.slackChannel || 'e.g. dev-channel'} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(0, 'slackChannel', value)} 
-                />
-            </div>
-            <h2 className="text-xl text-left pt-8 font-bold text-gray-700 dark:text-gray-300">Optional</h2>
-            <div className="space-y-4">
-                <SettingsAttribute 
-                    type="keywords" 
-                    displayName="Keywords 2" 
-                    value={keywords[1]?.keywords || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={true} 
-                    onChangeFunction={(value) => handleKeywordChange(1, 'keywords', value)} 
-                />
-                <SettingsAttribute 
-                    type="email" 
-                    displayName="Email 2" 
-                    value={keywords[1]?.email || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(1, 'email', value)} 
-                />
-                <SettingsAttribute 
-                    type="slackChannel" 
-                    displayName="Slack Channel 2" 
-                    value={keywords[1]?.slackChannel || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(1, 'slackChannel', value)} 
+                <SettingsAttribute
+                    type="slackChannel"
+                    displayName="Slack Channel"
+                    value={keywords[0]?.slackChannel || 'e.g. dev-channel'}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(0, 'slackChannel', value)}
                 />
             </div>
-            <div className="space-y-4">
-                <SettingsAttribute 
-                    type="keywords" 
-                    displayName="Keywords 3" 
-                    value={keywords[2]?.keywords || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={true} 
-                    onChangeFunction={(value) => handleKeywordChange(2, 'keywords', value)} 
+            <div className="flex items-center pt-10">
+                <hr className="flex-grow border-t border-gray-300 dark:border-gray-700" />
+                <h2 className="text-xl text-left font-bold text-gray-900 dark:text-gray-300  mx-4">Optional</h2>
+                <hr className="flex-grow border-t border-gray-300 dark:border-gray-700" />
+            </div>
+            <div className="space-y-4 pt-5">
+                <h3 className="text-lg text-left font-semibold text-gray-900 dark:text-gray-300">Agent Beta</h3>
+                <SettingsAttribute
+                    type="keywords"
+                    displayName="Keywords"
+                    value={keywords[1]?.keywords || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={true}
+                    onChangeFunction={(value) => handleKeywordChange(1, 'keywords', value)}
                 />
-                <SettingsAttribute 
-                    type="email" 
-                    displayName="Email 3" 
-                    value={keywords[2]?.email || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(2, 'email', value)} 
+                <SettingsAttribute
+                    type="email"
+                    displayName="Email"
+                    value={keywords[1]?.email || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(1, 'email', value)}
                 />
-                <SettingsAttribute 
-                    type="slackChannel" 
-                    displayName="Slack Channel 3" 
-                    value={keywords[2]?.slackChannel || ''} 
-                    loading={false} 
-                    buttonName="View" 
-                    showButton={false} 
-                    textArea={false} 
-                    onChangeFunction={(value) => handleKeywordChange(2, 'slackChannel', value)} 
+                <SettingsAttribute
+                    type="slackChannel"
+                    displayName="Slack Channel"
+                    value={keywords[1]?.slackChannel || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(1, 'slackChannel', value)}
+                />
+            </div>
+            <div className="space-y-4 pt-5">
+                <h3 className="text-lg text-left font-semibold text-gray-900 dark:text-gray-300">Agent Gamma</h3>
+                <SettingsAttribute
+                    type="keywords"
+                    displayName="Keywords"
+                    value={keywords[2]?.keywords || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={true}
+                    onChangeFunction={(value) => handleKeywordChange(2, 'keywords', value)}
+                />
+                <SettingsAttribute
+                    type="email"
+                    displayName="Email"
+                    value={keywords[2]?.email || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(2, 'email', value)}
+                />
+                <SettingsAttribute
+                    type="slackChannel"
+                    displayName="Slack Channel"
+                    value={keywords[2]?.slackChannel || ''}
+                    loading={false}
+                    buttonName="View"
+                    showButton={false}
+                    textArea={false}
+                    onChangeFunction={(value) => handleKeywordChange(2, 'slackChannel', value)}
                 />
             </div>
         </div>
