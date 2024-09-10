@@ -1,37 +1,44 @@
-
-
 # ⚡️GmailGenius: Supercharge your Gmail
-*Automatically processes new emails, extracts data from attachments, and organizes everything in a spreadsheet!*
+*Turbocharge your Gmail! GmailGenius scans new emails, instantly zapping important emails to the right team - all while you sip your coffee*
 
 ## Demo
 ### Check it out on Replit
-[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit&style=for-the-badge)](https://replit.com/@abishkpatil/gmail-assistant-fb)
+[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit&style=for-the-badge)](https://replit.com/@abishkpatil/gmail-support-bot)
 
-### Live Demo ([Live Link](https://gmail-assistant-six.vercel.app/))
-[![gmailgenius-demo](https://github.com/user-attachments/assets/abb24495-d242-42f3-8cff-599182f735f4)](https://drive.google.com/file/d/1_CWZ3yNK4pxe8Ey1bnQq4C6H_lEHDICb/preview)
+### Live Demo ([Live Link](https://gmailsupportbot.try.composio.dev/))
+[![gmailgenius-demo](https://github.com/user-attachments/assets/100546dd-5ee2-422c-896b-fb35db544f6b)](https://drive.google.com/file/d/1ktEc7Rmw7Hzg_1tHGW3OpKDio6gjBN3A/preview)
 
 ## Description
 GmailGenius simplifies the process of finding relevant emails, downloading attachments, and extracting key data. Here's how it works:
 
-1. **Sign up on GmailGenius** and link your Gmail account and Google Sheet
-2. **Enter keywords** you want the AI agent to look for in your email
-3. **GmailGenius finds emails and attachments** from Gmail that match your keyword criteria
-4. **Useful information from the attachments is extracted and stored** in your linked Google Sheet.
+1. **Connect Services:**  
+   Link your **Gmail** and **Slack** accounts to GmailGenius for seamless integration and automated email management.
+
+2. **Configure Keywords:**  
+   Add **keywords** along with corresponding email addresses and Slack channel names to customize your email routing and notification preferences.
+
+3. **Automatic Processing:**  
+   When a new email arrives in your inbox, GmailGenius **automatically processes** it using your predefined rules and settings.
+
+4. **Intelligent Routing:**  
+   Based on the configured keywords, GmailGenius **forwards the email** to the right email address ensuring efficient distribution of information.
+
+5. **Slack Notification:**  
+   GmailGenius also sends a notification to the corresponding **Slack channel** keeping your team informed in real-time.
 
 ### Under the hood, the AI agent divides the task into multiple steps and executes them:
 
-<img width="1664" alt="Screenshot 2024-09-02 at 12 53 53 AM" src="https://github.com/user-attachments/assets/07d51b40-dbd1-4406-9a28-942a4c1e6f86">
+<img width="1664" alt="Screenshot 2024-09-02 at 12 53 53 AM" src="https://github.com/user-attachments/assets/5da4bb62-5935-4ee2-bb9a-ac7e54350e62">
 
-1. **Retrieves emails from Gmail** that match the keyword/phrase criteria.
-2. **Downloads** the relevant attachments.
-3. **Extracts useful attributes** from the email body & attachments.
-4. **Stores** the extracted data in the linked Google Sheet.
+1. **Retrieves emails from Gmail** that match the keyword criteria.
+2. **Automatically replies** to the sender
+3. **Forwards email** to the configured email id and sends a message to Slack channel
 
 ## Tech Stack
 - Frontend: ReactJS, Vite, TailwindCSS
 - Backend: Python, FastAPI
 - AI Agent: CrewAI, Composio, OpenAI
-- Composio tools: [Gmail](https://app.composio.dev/app/gmail), [Google Sheets](https://app.composio.dev/app/googlesheets)
+- Composio tools: [Gmail](https://app.composio.dev/app/gmail), [Slackbot](https://app.composio.dev/app/slackbot)
 
 ## Run Locally
 ### Setup tutorial
@@ -40,19 +47,13 @@ GmailGenius simplifies the process of finding relevant emails, downloading attac
 Clone the project
 
 ```bash
-  git clone https://github.com/ComposioHQ/cookbook.git
-```
-
-Go to the project directory
-
-```bash
-  cd gmail-assistant/gmail-assistant-firebase
+  git clone https://github.com/abhishekpatil4/gmail-support-bot.git
 ```
 
 ### Backend
 
 Go to backend dir & run setup script, this will create a virtual environment & download necessary libraries (Note: if you're unable to execute then grant permisson -> chmod +x setup.sh)
-You'll then be prompted to login to **Composio**, link **Gmail** & **Google Sheets**. 
+You'll then be prompted to login to **Composio**, link **Gmail** & **Slack workspace**. 
 Add API keys in **.env file**
 
 ```bash
@@ -93,8 +94,3 @@ If you're prompted to login & enter API key, run the below command to login
 ```
 
 You'll be redirected to composio website, login, get the API key and paste it
-
-## 🛡️ License
-
-Composio is licensed under the Elastic License - see the [LICENSE](https://github.com/composiodev/composio/blob/master/LICENSE) file for details.
-  
