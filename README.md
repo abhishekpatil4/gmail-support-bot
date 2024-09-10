@@ -1,6 +1,12 @@
 # ⚡️GmailGenius: Supercharge your Gmail
 *Turbocharge your Gmail! GmailGenius scans new emails, instantly zapping important emails to the right team - all while you sip your coffee*
 
+## Why GmailGenius?
+
+I work at a startup, and our email inbox was starting to look like a hoarder’s paradise—bugs, collaboration requests, and the occasional cat meme cluttering it up. Managing it was like trying to find a needle in a haystack, except the haystack was on fire and the needle was a sarcastic comment from our intern.
+So, I decided to channel my inner tech wizard and built an AI agent. This little genius scans new emails, categorizes them, and forwards them to the right team and Slack channel. Think of it as the email bouncer—only letting in the VIPs (Very Important Projects) and kicking out the spammy party crashers.
+I used CrewAI for building the agent, which is like having a Swiss Army knife for AI development—just without the risk of cutting yourself. The real magic, though, comes from [Composio](https://app.composio.dev)’s powerful [Gmail](https://app.composio.dev/app/gmail) and [Slackbot](https://app.composio.dev/app/slackbot) tools. Integrating them was so easy, it felt like I was just plugging in a toaster. One minute I was drowning in emails, and the next, I was sipping coffee while my AI buddy did the heavy lifting. 
+
 ## Demo
 ### Check it out on Replit
 [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit&style=for-the-badge)](https://replit.com/@abishkpatil/gmail-support-bot)
