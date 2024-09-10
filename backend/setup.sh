@@ -3,11 +3,11 @@
 
 # Create a virtual environment
 echo "Creating virtual environment..."
-python3 -m venv ~/.venvs/gmail_agent
+python3 -m venv ~/.venvs/gmail_support_bot
 
 # Activate the virtual environment
 echo "Activating virtual environment..."
-source ~/.venvs/gmail_agent/bin/activate
+source ~/.venvs/gmail_support_bot/bin/activate
 
 # Install libraries from requirements.txt 
 echo "Installing libraries from requirements.txt..."
@@ -17,10 +17,13 @@ pip install -r requirements.txt
 echo "Login to your Composio acount"
 composio login
 
-# Add calendar tool
-echo "Add Gmail tools. Finish the flow"
+# Add Gmail tool
+echo "Add Gmail tool"
 composio add gmail
-composio add googlesheets 
+
+# Add Slackbot tool
+echo "Add Slakbot tool"
+composio add slackbot
 
 # Copy env backup to .env file
 if [ -f ".env.example" ]; then
